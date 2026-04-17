@@ -1,0 +1,67 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background: #002fff;
+    color: rgb(255, 255, 255);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 40px;
+    background: #020617;
+}
+
+.navbar a {
+    color: white;
+    margin-left: 15px;
+}
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+}
+
+.hero img {
+    width: 300px;
+    border-radius: 10px;
+}
+
+.btn {
+    background: #00f5ff;
+    padding: 10px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.features {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.kolom {
+    background: #0f172a;
+    padding: 15px;
+    border-radius: 10px;
+    width: 25%;
+}
+
+.game {
+    text-align: center;
+    padding: 40px;
+}
+
+.game1 {
+    background: #0f172a;
+    padding: 15px;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+.footer {
+    text-align: center;
+    padding: 15px;
+    background: #020617;
+}
