@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Portfolio Faisal</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Gradient background */
+    body {
+      background: radial-gradient(circle at top, #1e3a8a, #020617);
+    }
+
+    /* Animasi muncul */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s ease;
+    }
+
+    .fade-up.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+
+<body class="text-white font-sans">
+
+<div class="max-w-6xl mx-auto px-4">
+
+  <!-- NAVBAR -->
+  <nav class="sticky top-0 z-50 bg-white/10 backdrop-blur-lg border border-white/10 mt-4 rounded-xl px-6">
+    <div class="flex justify-between items-center py-3">
+      <h1 class="font-bold text-blue-400">Faisal.dev</h1>
+
+      <div class="flex gap-6 text-sm">
+        <a href="#home" class="hover:text-blue-400">Home</a>
+        <a href="#about" class="hover:text-blue-400">About</a>
+        <a href="#project" class="hover:text-blue-400">Project</a>
+        <a href="#contact" class="hover:text-blue-400">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section id="home" class="text-center py-24 fade-up">
+    <h2 class="text-4xl md:text-6xl font-bold mb-4">
+      Halo, Saya <span class="text-blue-400">Faisal</span>
+    </h2>
+
+    <p id="typing" class="text-gray-300 text-lg"></p>
+
+    <div class="mt-6">
+      <a href="#project" class="bg-blue-600 px-8 py-3 rounded-full hover:bg-blue-500 transition shadow-lg">
+        Lihat Project
+      </a>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="grid md:grid-cols-2 gap-10 items-center py-20 fade-up">
+    <img src="html.png" class="rounded-2xl shadow-xl hover:scale-105 transition">
+
+    <div>
+      <h2 class="text-3xl font-bold mb-4">Tentang Saya</h2>
+      <p class="text-gray-300 leading-relaxed">
+        Saya mahasiswa yang fokus belajar web development dan UI modern.
+        Saya suka membuat desain yang clean, minimal, dan interaktif.
+      </p>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section class="py-20 fade-up">
+    <h2 class="text-3xl font-bold text-center mb-8">Skills</h2>
+
+    <div class="flex justify-center gap-4 flex-wrap">
+      <span class="bg-blue-600 px-6 py-2 rounded-full hover:scale-110 transition shadow">HTML</span>
+      <span class="bg-blue-600 px-6 py-2 rounded-full hover:scale-110 transition shadow">CSS</span>
+      <span class="bg-blue-600 px-6 py-2 rounded-full hover:scale-110 transition shadow">Tailwind</span>
+    </div>
+  </section>
+
+  <!-- PROJECT -->
+  <section id="project" class="py-20 fade-up">
+    <h2 class="text-3xl font-bold text-center mb-10">Project</h2>
+
+    <div class="grid md:grid-cols-3 gap-8">
+
+      <div class="bg-white/10 backdrop-blur-lg p-6 rounded-2xl hover:scale-105 transition shadow-lg">
+        <h3 class="font-bold text-xl">Website Kopi</h3>
+        <p class="text-gray-300 mt-2">Landing page modern</p>
+      </div>
+
+      <div class="bg-white/10 backdrop-blur-lg p-6 rounded-2xl hover:scale-105 transition shadow-lg">
+        <h3 class="font-bold text-xl">Game FF UI</h3>
+        <p class="text-gray-300 mt-2">UI game keren</p>
+      </div>
+
+      <div class="bg-white/10 backdrop-blur-lg p-6 rounded-2xl hover:scale-105 transition shadow-lg">
+        <h3 class="font-bold text-xl">Portfolio</h3>
+        <p class="text-gray-300 mt-2">Website pribadi</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="text-center py-20 fade-up">
+    <h2 class="text-3xl font-bold mb-6">Contact</h2>
+
+    <a href="https://wa.me/6281230578406?text=Halo%20saya%20ingin%20bertanya"
+      target="_blank"
+      class="bg-green-500 px-8 py-3 rounded-full hover:bg-green-400 transition shadow-lg inline-block">
+      Chat WhatsApp
+    </a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="text-center py-6 text-gray-400 text-sm">
+    © 2026 Faisal
+  </footer>
+
+</div>
+
+<!-- SCRIPT -->
+<script>
+  // Typing effect
+  const text = "Saya membuat website modern, interaktif, dan responsive 🚀";
+  let i = 0;
+
+  function typing() {
+    if (i < text.length) {
+      document.getElementById("typing").innerHTML += text.charAt(i);
+      i++;
+      setTimeout(typing, 50);
+    }
+  }
+  typing();
+
+  // Scroll animation
+  const elements = document.querySelectorAll(".fade-up");
+
+  function showOnScroll() {
+    elements.forEach(el => {
+      const position = el.getBoundingClientRect().top;
+      const screen = window.innerHeight;
+
+      if (position < screen - 100) {
+        el.classList.add("show");
+      }
+    });
+  }
+
+  window.addEventListener("scroll", showOnScroll);
+</script>
+
+</body>
+</html>

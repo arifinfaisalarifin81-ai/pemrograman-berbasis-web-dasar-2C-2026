@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Profil Kecamatan Blega</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+    <style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f5f7fa;
+    color: #333;
+}
+
+.navbar {
+    background: rgba(44, 62, 80, 0.9);
+    backdrop-filter: blur(10px);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 50px;
+    position: sticky;
+    top: 0;
+}
+
+.navbar a {
+    color: white;
+    margin-left: 20px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.navbar a:hover {
+    color: #00d2ff;
+}
+
+.hero {
+    height: 100vh;
+    background: linear-gradient(135deg, #00d2ff, #3a7bd5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-text h1 {
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+.hero-text p {
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+.hero-text button {
+    padding: 12px 25px;
+    border: none;
+    background: white;
+    color: #3a7bd5;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.hero-text button:hover {
+    background: #222;
+    color: white;
+}
+
+.section {
+    padding: 70px 50px;
+    text-align: center;
+}
+
+.section h2 {
+    margin-bottom: 20px;
+    font-size: 30px;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    width: 260px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.gallery img {
+    width: 250px;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.1);
+}
+
+footer {
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+    </style>
+
+<body>
+
+<header class="navbar">
+    <h2>Kecamatan Blega</h2>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#tentang">Tentang</a>
+        <a href="#potensi">Potensi</a>
+        <a href="#galeri">Galeri</a>
+        <a href="#kontak">Kontak</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="hero-text">
+        <h1>Selamat Datang di Kecamatan Blega</h1>
+        <p>Kecamatan yang berkembang, asri, dan penuh potensi lokal</p>
+        <button>Jelajahi</button>
+    </div>
+</section>
+
+<section id="tentang" class="section">
+    <h2>Tentang Kecamatan</h2>
+    <p>
+        Kecamatan Blega merupakan salah satu wilayah yang memiliki potensi
+        besar di bidang pertanian.
+    </p>
+</section>
+
+<section id="potensi" class="section">
+    <h2>Potensi Daerah</h2>
+    <div class="card-container">
+        <div class="card">
+            <h3>Pertanian</h3>
+            <p>Hasil pertanian unggulan seperti padi dan sayuran.</p>
+        </div>
+        <div class="card">
+            <h3>Wisata</h3>
+            <p>Wisata alam yang indah dan menarik untuk dikunjungi.</p>
+        </div>
+    </div>
+</section>
+
+<section id="galeri" class="section">
+    <h2>Galeri</h2>
+    <div class="gallery">
+        <img src="tani.jpeg">
+        <img src="blega.jpeg">
+    </div>
+</section>
+
+<section id="kontak" class="section">
+    <h2>Kontak</h2>
+    <p>Alamat: Kecamatan Blega, Indonesia</p>
+    <p>Email: blega@email.com</p>
+</section>
+
+<footer>
+    <p>© 2026 Kecamatan Blega</p>
+</footer>
+
+</body>
+</html>
