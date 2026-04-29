@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <title>Login Page</title>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row vh-100">
+        <!-- LEFT -->
+        <div class="col-md-7 bg-primary text-white d-flex flex-column justify-content-center align-items-center text-center p-5">
+          <h1 class="fw-bold text-start">
+            Hello Prospective <br />
+            Students
+          </h1>
+
+          <img src="gambar_login page.png" width="400" alt="" />
+
+          <p class="fs-4 fw-semibold text-start">
+            Unlock your professional potential. Learn from <br />
+            industry leaders and stay ahead of the <br />
+            competition.
+          </p>
+        </div>
+
+        <div class="col-md-5 bg-white d-flex justify-content-center align-items-center">
+          <div class="w-75">
+            <h3 class="text-center mb-3">LOGIN PAGE</h3>
+            <p class="text-center text-muted small">Masukkan Username dan Password Anda</p>
+
+            <form id="loginForm">
+              <!-- ERROR -->
+              <div id="errorMsg" class="alert alert-danger d-none mb-3"></div>
+
+              <div class="mb-3">
+                <input type="email" id="email" class="form-control form-control-lg" placeholder="Email Address" />
+              </div>
+
+              <div class="mb-3">
+                <input type="password" id="password" class="form-control form-control-lg" placeholder="Password" />
+              </div>
+
+              <div class="d-grid mb-3">
+                <button type="submit" class="btn btn-primary btn-lg">Login</button>
+              </div>
+
+              <div class="text-center text-muted mb-3">Or Login With</div>
+
+              <div class="d-grid">
+                <button type="button" class="btn btn-outline-secondary btn-lg d-flex align-items-center justify-content-center gap-2">
+                  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/google/google-original.svg" width="20" height="20" />
+                  <span>Sign In with Google</span>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.getElementById("loginForm").addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const email = document.getElementById("email").value.trim();
+        const password = document.getElementById("password").value.trim();
+        const errorMsg = document.getElementById("errorMsg");
+
+        errorMsg.classList.add("d-none");
+
+        if (email === "" || password === "") {
+          errorMsg.innerHTML = "Email dan Password wajib diisi!";
+          errorMsg.classList.remove("d-none");
+          return;
+        }
+
+        const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+        if (!email.match(emailPattern)) {
+          errorMsg.innerHTML = "Format email tidak valid!";
+          errorMsg.classList.remove("d-none");
+          return;
+        }
+
+        if (password.length < 6) {
+          errorMsg.innerHTML = "Password harus lebih dari 6 karakter!";
+          errorMsg.classList.remove("d-none");
+          return;
+        }
+
+        window.location.href = "hal2.html";
+      });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
